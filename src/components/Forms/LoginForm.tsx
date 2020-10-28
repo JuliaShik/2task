@@ -10,7 +10,8 @@ const LoiginForm: React.FC<IProps> = (props: IProps) => {
   const [login, setLogin] = useState<string>();
   const [pass, setPass] = useState<string>();
   const [code, setCode] = useState<string>();
-  const [isErr, setIsErr] = useState<boolean>(false);
+  const [isErr1, setIsErr1] = useState<boolean>(false);
+  const [isErr2, setIsErr2] = useState<boolean>(false);
   const [form, setForm] = useState<string>('login');
 
   let history = useHistory();
@@ -30,22 +31,20 @@ const LoiginForm: React.FC<IProps> = (props: IProps) => {
   }
 
   const Login = () => {
-    if (login !== 'kode@kode.ru' && pass !== 'Enk0deng') {
-      setIsErr(true)
+    if (login != 'kode@kode.ru' && pass != 'Enk0deng') {
+      setIsErr1(true)
     } else {
       setForm('code')
       alert('Код: 529384')
-      setIsErr(false)
     }
   }
 
   function Code() {
 
-    if (code !== '529384') {
-      setIsErr(true)
+    if (code != '529384') {
+      setIsErr2(true)
     } else {
       props.isAuth();
-      setIsErr(false)
       history.replace('/');
     }
   }
