@@ -62,7 +62,7 @@ const LoiginForm: React.FC<IProps> = (props: IProps) => {
         type="password"
         data={SetPass}/>
       {
-        (isErr) ?
+        (isErr1) ?
           <p className="form-invalid">Неверный логин или пароль</p> :
           null
       }
@@ -81,7 +81,7 @@ const LoiginForm: React.FC<IProps> = (props: IProps) => {
         type="code"
         data={SetCode}/>
       {
-        (isErr) ?
+        (isErr2) ?
           <p className="form-invalid">Неверный код</p> :
           null
       }
