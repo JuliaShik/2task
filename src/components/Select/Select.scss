@@ -1,0 +1,96 @@
+@import '../../scss/app.scss';
+
+.select {
+  width: 100%;
+  position: relative;
+  &__content {
+    position: absolute;
+    top: 2px;
+    left: 0;
+    right: 0;
+    transition: .1s;
+    z-index: -1;
+    overflow: hidden;
+    background: #ffffff;
+    border-radius: 7px;
+    opacity: 0;
+    box-shadow: $Shadow;
+  }
+  &__items {
+    max-height: 200px;
+    overflow: auto;
+    &::-webkit-scrollbar-button {
+      width: 6px;
+      height: 0px
+    }
+    &::-webkit-scrollbar-track {
+      background-color: $COLOR_GRAY;
+    }
+    &::-webkit-scrollbar-thumb {
+      -webkit-border-radius: 5px;
+      border-radius: 5px;
+      background-color: $COLOR_GRAY-3;
+    }
+    &::-webkit-resizer{
+      width: 7px;
+      height: 0px
+    }
+    &::-webkit-scrollbar{
+      width: 11px;
+    }
+  }
+  &.select_open {
+    & .select__btn {
+      background: $COLOR_GRAY;
+      color: $COLOR_DARK-GRAY;
+    }
+    & .select__content {
+      top: calc(100% + 5px);
+      z-index: 2;
+      opacity: 1;
+    }
+    & .select__icon {
+      fill: $COLOR_DARK-GRAY;
+    }
+  }
+  &__icon {
+    fill: #ffffff;
+    width: 10px;
+    height: 10px;
+  }
+  &__btn {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    background: $COLOR_GRAY-2;
+    color: #ffffff;
+    border-radius: 7px;
+    padding: .7rem 1rem;
+    &:hover {
+      background: #f2f2f27e;
+    }
+  }
+  &__input {
+    display: block;
+    width: 90%;
+    margin: 1rem auto;
+    box-sizing: border-box;
+    padding: .3rem .5rem;
+    border: none;
+    outline: none;
+    background: $COLOR_GRAY;
+    border-radius: 7px;
+    font-size: 14px;
+  }
+  &__item {
+    cursor: pointer;
+    padding: .5rem 1rem;
+    transition: .3s;
+    &:hover {
+      background: $COLOR_GRAY;
+      color: $COLOR_BLUE;
+    }
+  }
+}
+

@@ -1,0 +1,66 @@
+@import '../../scss/app.scss';
+
+.pagination {
+  width: 100%;
+  overflow: hidden;
+  margin-bottom: 30px;
+  &-wrapp {
+    display: flex;
+    position: relative;
+  }
+  &-prev, &-next, &-item, &-current {
+    font-size: 15px;
+    border: none;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    transition: .2s;
+    border-radius: 5px;
+  }
+  &-prev, &-next, &-item {
+    outline: none;
+    cursor: pointer;
+    &+& {
+      margin-left: 10px;
+    }
+  }
+  &-next, &-prev {
+    background:#fff;
+    &__icon {
+      width: 10px;
+      height: 10px;
+      display: none;
+    }
+    &:hover {
+      background: $COLOR_GRAY-2;
+      span {
+        display: none;
+      }
+      svg {
+        display: block;
+      }
+    }
+  }
+  &-current {
+    background: $GRAD;
+    color: #ffffff;
+    position: absolute;
+  }
+
+  &-item {
+    background: $COLOR_GRAY-2;
+    &:hover {
+      background: $COLOR_GRAY-3;
+      color: #ffffff;
+    }
+    &_current {
+      background: $GRAD;
+      color: #ffffff;
+      &:hover {
+        background: $GRAD;
+      }
+    }
+  }
+}

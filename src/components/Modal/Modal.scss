@@ -1,0 +1,45 @@
+@import '../../scss/app.scss';
+
+.modal {
+  $padding: 15px;
+  position: fixed;
+  background: rgba(37, 37, 37, 0.548);
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+  &.modal_visibil {
+    display: flex;
+  }
+  &-block {
+    background: white;
+    border-radius: 5px;
+    position: relative;
+    padding: $padding;
+    max-width: 600px;
+    width: 100%;
+  }
+  &-btn-close {
+    border: none;
+    background: transparent;
+    cursor: pointer;
+    outline: none;
+    position: absolute;
+    top: $padding;
+    right: $padding;
+    opacity: .7;
+    transition: .2s;
+    &:hover {
+      opacity: 1;
+    }
+    &__icon {
+      height: 15px;
+      width: 15px;
+      fill: $COLOR_GRAY-4;
+    }
+  }
+}

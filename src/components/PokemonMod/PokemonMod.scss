@@ -1,0 +1,31 @@
+@import '../../scss/app.scss';
+
+.pokemon-mod {
+  display: block;
+  &-img {
+    width: 100%;
+  }
+  &-name {
+    font-size: 21px;
+    margin-bottom: 40px;
+    margin-top: 20px;
+    color: $COLOR_VIOLET;
+  }
+  &-text {
+    margin-bottom: 40px;
+    font-size: 15px;
+    color: $COLOR_GRAY-4;
+  }
+  &-col-l {
+    margin-right: 30px;
+  }
+}
+
+@media($min-w-xs) {
+  .pokemon-mod {
+    display: flex;
+      &-img {
+        width: 300px;
+    }
+  }
+}

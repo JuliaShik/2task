@@ -1,0 +1,22 @@
+$COLOR_BLUE: #2C55FF;
+$COLOR_VIOLET: #9A38FC;
+$COLOR_RED: rgb(235, 28, 28);
+$COLOR_DARK-GRAY: rgb(37, 37, 37);
+$COLOR_DARK-GRAY-2: rgb(63, 63, 63);
+$COLOR_GRAY: #F2F2F2;
+$COLOR_GRAY-2: #f2f2f262;
+$COLOR_GRAY-3: #b4b4b4;
+$COLOR_GRAY-4: #3f3f3f;
+$GRAD: linear-gradient(90deg, $COLOR_VIOLET 0%, $COLOR_BLUE 91.18%);
+$Shadow: 0px 0px 15px rgba(56, 56, 58, 0.219);
+
+$min-w-xs: 'min-width: 560px';
+$min-w-sm: 'min-width: 768px';
+$min-w-md: 'min-width: 979px';
+$min-w-lg: 'min-width: 1024px';
+$min-w-xl: 'min-width: 1920px';
+
+$max-w-xs: 'max-width: 560px';
+$max-w-sm: 'max-width: 768px';
+$max-w-md: 'max-width: 979px';
+$max-w-lg: 'max-width: 1024px';

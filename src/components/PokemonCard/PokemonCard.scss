@@ -1,0 +1,99 @@
+@import '../../scss/app.scss';
+
+.pokemon-card {
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 50px 30px 0 30px;
+  &-text {
+    font-size: 14px;
+    color: $COLOR_GRAY-4;
+    margin-bottom: 30px;
+  }
+  &-img {
+    width: 100%;
+    margin-bottom: 30px;
+  }
+  &-name {
+    font-size: 21px;
+    margin: 20px 0 30px 0;
+    color: $COLOR_GRAY-4;
+  }
+  &-info {
+    color: $COLOR_GRAY-4;
+    & p {
+      margin-bottom: 16px;
+      font-weight: bold;
+    }
+  }
+  & hr {
+    margin: 40px 0;
+    background-color: $COLOR_GRAY;
+    border: none;
+    height: 2px;
+  }
+  &-label {
+    color: #fff;
+    background: $GRAD;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    font-size: 14px;
+    margin-left: 15px;
+  }
+  &-col-l {
+    width: 100%;
+  }
+  &-sub {
+    font-weight: normal;
+    color: $COLOR_VIOLET;
+    padding: 0 15px;
+    &_no {
+      color: $COLOR_GRAY-3;
+    }
+    &-col-r {
+      width: 100%;
+    }
+  }
+}
+@media($min-w-xs) {
+  .pokemon-card {
+    &-col-l {
+      width: 40%;
+      margin-right: 50px;
+    }
+    &-col-r {
+      width: calc(100% - 40% - 50px);
+    }
+  }
+}
+@media($min-w-sm) {
+  .pokemon-card {
+    &-col-r {
+      width: auto;
+    }
+  }
+}
+@media($min-w-md) {
+  .pokemon-card {
+    &-name {
+      font-size: 31px;
+      margin: 30px 0 50px 0;
+    }
+    &-col-l {
+      margin-right: 130px;
+      max-width: 400px;
+    }
+    &-info {
+    & p {
+      margin-bottom: 20px;
+    }
+  }
+  }
+}
+

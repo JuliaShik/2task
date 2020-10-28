@@ -1,0 +1,73 @@
+@import '../../scss/app.scss';
+
+.pokemon-items {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.pokemon-item {
+  margin-bottom: 50px;
+  cursor: pointer;
+  transition: .3s;
+  border-radius: 15px;
+  background: $COLOR_GRAY;
+  padding: 20px;
+  color: $COLOR_DARK-GRAY;
+  &:hover {
+    box-shadow: $Shadow
+  }
+  &-img {
+    width: 100%;
+    margin-bottom: 1rem;
+  }
+  &-name {
+    font-size: 16px;
+    margin-bottom: 1rem;
+  }
+  &-labels {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  &-label {
+    color: #fff;
+    border-radius: 15px;
+    background: #9A38FC;
+    padding: .3rem .7rem;
+    font-size: 12px;
+    margin-right: 5px;
+    margin-bottom: 4px;
+    &+& {
+      background: #2C55FF;
+    }
+  }
+}
+
+@media($min-w-xs) {
+  .pokemon-item {
+    width: calc(50% - 25px);
+    padding: 30px;
+    &:hover {
+      transform: translateY(-10px)
+    }
+    &:nth-child(2n-1) {
+      margin-right: 50px;
+    }
+  }
+}
+
+@media($min-w-lg) {
+  .pokemon-item {
+    &-label {
+      font-size: 14px;
+    }
+    &-name {
+      font-size: 18px;
+    }
+  }
+}
+
+@media($min-w-xl) {
+  .pokemon-item {
+    padding: 40px;
+  }
+}
